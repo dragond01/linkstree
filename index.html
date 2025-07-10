@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>@clippeler1 | Linktree 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Geser -->
+  <div id="bgSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="11.jpg" class="d-block w-100" alt="Background 1">
+      </div>
+      <div class="carousel-item">
+        <img src="12.jpg" class="d-block w-100" alt="Background 2">
+      </div>
+      <div class="carousel-item">
+        <img src="13.jpg" class="d-block w-100" alt="Background 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- Konten Overlay -->
+  <div class="overlay-content">
+    <img src="p.png" alt="Foto Profil" />
+    <h1>@clippeler1</h1>
+    <p>Selamat datang di semua link pentingku 👇</p>
+
+    <a class="link-btn" href="https://tiktok.com/@clippeler1" target="_blank">🎵 TikTok Saya</a>
+    <a class="link-btn" href="https://akademicrypto.com/" target="_blank">📊 Academy Crypto</a>
+    <a class="link-btn" href="https://ternakuang.id/" target="_blank">💰 Ternak Uang</a>
+    <a class="link-btn" href="https://youtube.com/@timothyronald?si=-lQt2L4-1SvzYslZ" target="_blank">▶️ Youtube Timothy Ronald</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ <!--Sound click -->
+ <audio id="clickSound" src="click.wav" preload="auto"></audio>
+ <script>
+  function playSound() {
+    const audio = document.getElementById("clickSound");
+    if (audio) {
+      audio.currentTime = 0; // mulai dari awal
+      audio.play(); // mainkan suara
+    }
+  }
+
+  // Tambahkan event klik ke semua tombol .link-btn
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".link-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", playSound);
+    });
+  });
+</script>
+
+  
+<!-- Background music -->
+<audio id="bgMusic" src="jj.mp3" autoplay loop preload="auto"></audio>
+
+<!-- Click sound -->
+<audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+<!-- Tombol kontrol musik -->
+<button onclick="toggleMusic()" class="music-toggle">🎶 Musik</button>
+
+<script>
+  // Suara klik
+  function playSound() {
+    const audio = document.getElementById("clickSound");
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  // Tambah event ke semua tombol
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".link-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", playSound);
+    });
+  });
+
+  // Toggle musik latar
+  function toggleMusic() {
+    const bgMusic = document.getElementById("bgMusic");
+    if (bgMusic.paused) {
+      bgMusic.play();
+    } else {
+      bgMusic.pause();
+    }
+  }
+</script>
+
+  
+</body>
+</html>
